@@ -1,0 +1,15 @@
+<h1>HeirBnB</h1>
+<p>The only place to buy your very own castle</p>
+
+<% if user_signed_in? %>
+  <%=current_user.email%>
+<%end%>
+
+<br>
+<%= link_to 'Log in', new_user_session_path %> <br>
+<%= link_to 'sign out',  destroy_user_session_path, method: :delete,
+            data: { confirm: "Are you sure?" }%>
+
+<% @castles.each do |castle| %>
+  <p><%= castle.name %></p>
+<% end %>
