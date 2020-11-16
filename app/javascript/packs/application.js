@@ -8,9 +8,7 @@ require("@rails/activestorage").start()
 require("channels")
 var $ = require( "jquery" )
 require("slick-carousel")
-
-import "slick-carousel/slick/slick.scss"
-import "slick-carousel/slick/slick-theme.scss"
+require owl.carousel
 import "../styles/application.scss"
 // Uncomment to copy all static images under ../images to the output folder and reference
 // them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)
@@ -32,12 +30,7 @@ import "bootstrap";
 // import { initSelect2 } from '../components/init_select2';
 
 document.addEventListener("turbolinks:load", function() {
-  $('.scroller').slick()
-})
 
-
-$('.multiple-items').slick({
-  infinite: true,
-  slidesToShow: 3,
-  slidesToScroll: 3
 });
+
+$(".owl-carousel").owlCarousel();
