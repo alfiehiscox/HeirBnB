@@ -1,3 +1,22 @@
+<h1>HeirBnB</h1>
+<p>The only place to buy your very own castle</p>
+
+<% if user_signed_in? %>
+  <%=current_user.email%>
+  <%= current_user.id %>
+<%end%>
+
+<br>
+<%= link_to 'Log in', new_user_session_path %> <br>
+<%= link_to 'sign out',  destroy_user_session_path, method: :delete,
+            data: { confirm: "Are you sure?" }%>
+
+<% @castles.each do |castle| %>
+  <p><%= link_to "#{castle.name} - #{castle.user.email}", castle_path(castle.id) %></p>
+<% end %>
+
+<%= link_to "Create a new castle", new_castle_path %>
+
 <!-- Content for the banner -->
 
 <div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.3) 0%, rgba(0,36,61,0.4) 50%), url('background-try.jpg');">
