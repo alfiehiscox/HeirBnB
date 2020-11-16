@@ -1,0 +1,8 @@
+<h1>Make a New Castle</h1>
+
+<%= simple_form_for @castle do |f| %>
+  <%= f.input :name %>
+  <%= f.input :address %>
+  <%= f.input :price_per_night %>
+  <%= f.submit %>
+<% end %>
