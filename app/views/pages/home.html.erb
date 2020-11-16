@@ -1,3 +1,6 @@
+
+<%= render 'shared/navbar' %>
+
 <h1>Pages#home</h1>
 <p>Find me in app/views/pages/home.html.erb</p>
 <% if user_signed_in? %>
@@ -5,4 +8,33 @@
   <%end%>
 <%= link_to 'sign out',  destroy_user_session_path, method: :delete,
             data: { confirm: "Are you sure?" }%>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="footer">
+  <div class="footer-links">
+    <a href="#"><i class="fab fa-github"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-linkedin"></i></a>
+  </div>
+  <div class="footer-copyright">
+    This is HeirBnB <i class="fas fa-crown"></i></i> 
+  </div>
+</div>
+
 
