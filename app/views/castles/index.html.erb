@@ -3,6 +3,7 @@
 
 <% if user_signed_in? %>
   <%=current_user.email%>
+  <%= current_user.id %>
 <%end%>
 
 <br>
@@ -11,5 +12,8 @@
             data: { confirm: "Are you sure?" }%>
 
 <% @castles.each do |castle| %>
-  <p><%= castle.name %></p>
+  <p><%= link_to "#{castle.name} - #{castle.user.email}", castle_path(castle.id) %></p>
 <% end %>
+
+<%= link_to "Create a new castle", new_castle_path %>
+
