@@ -29,9 +29,3 @@ class CastlesController < ApplicationController
     params.require(:castle).permit(:name, :address, :price_per_night)
   end
 end
-
-# # Castle
-# - name
-# - address
-# - ppn
-# - user_id
