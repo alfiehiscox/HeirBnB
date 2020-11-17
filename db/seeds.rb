@@ -17,7 +17,7 @@ puts "Creating Users..."
 end
 
 puts "Creating Castles..."
-5.times do
+12.times do
   castle = Castle.new
   castle.name = Faker::Movies::LordOfTheRings.location
   castle.address = Faker::Movies::StarWars.planet
