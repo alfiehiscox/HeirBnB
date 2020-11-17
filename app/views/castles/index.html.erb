@@ -1,5 +1,3 @@
-<h1>HeirBnB</h1>
-<p>The only place to buy your very own castle</p>
 
 <% if user_signed_in? %>
   <%=current_user.email%>
@@ -7,13 +5,86 @@
 <%end%>
 
 <br>
-<%= link_to 'Log in', new_user_session_path %> <br>
+ <br>
+
 <%= link_to 'sign out',  destroy_user_session_path, method: :delete,
             data: { confirm: "Are you sure?" }%>
-
 <% @castles.each do |castle| %>
   <p><%= link_to "#{castle.name} - #{castle.user.email}", castle_path(castle.id) %></p>
 <% end %>
 
 <%= link_to "Create a new castle", new_castle_path %>
 
+<!-- Content for the banner -->
+
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.3) 0%, rgba(0,36,61,0.4) 50%), url('https://images.unsplash.com/photo-1510480248785-c4483daedb19?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1756&q=80')">
+  <div class="banner-content">
+    <h1>Heirbnb</h1>
+    <p>Your kingdom awaits you...</p>
+    <%= link_to 'Log in', new_user_session_path %>
+  </div>
+</div>
+
+<!-- Content for lower half of the page including a 3 card carousel -->
+<h3 class = "text-center">Our <strong id="red-word">top picks</strong> from <strong id="red-word">legendary hosts</strong> around the world </h3>
+
+<div class="container text-center my-3">
+    <h2 class="font-weight-light">Bootstrap 4 - Multi Item Carousel</h2>
+    <div class="row mx-auto my-auto">
+        <div id="recipeCarousel" class="carousel slide w-100" data-ride="carousel">
+            <div class="carousel-inner w-100" role="listbox">
+                <div class="carousel-item active">
+                    <div class="col-md-4">
+                        <div class="card card-body">
+                            <img class="img-fluid" src="http://placehold.it/380?text=1">
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="col-md-4">
+                        <div class="card card-body">
+                            <img class="img-fluid" src="http://placehold.it/380?text=2">
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="col-md-4">
+                        <div class="card card-body">
+                            <img class="img-fluid" src="http://placehold.it/380?text=3">
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="col-md-4">
+                        <div class="card card-body">
+                            <img class="img-fluid" src="http://placehold.it/380?text=4">
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="col-md-4">
+                        <div class="card card-body">
+                            <img class="img-fluid" src="http://placehold.it/380?text=5">
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="col-md-4">
+                        <div class="card card-body">
+                            <img class="img-fluid" src="http://placehold.it/380?text=6">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev w-auto" href="#recipeCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon bg-dark border border-dark rounded-circle" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next w-auto" href="#recipeCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon bg-dark border border-dark rounded-circle" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+    <h5 class="mt-2">Advances one slide at a time</h5>
+</div>
