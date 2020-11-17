@@ -1,4 +1,13 @@
 // Specific CSS for your home-page
+body {
+    min-height: 100vh;
+    background: #fafafa;
+}
+
+.progress {
+    height: 10px;
+}
+
 .banner {
   color: white;
   text-align: center;
@@ -7,7 +16,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 
 .banner h1 {
@@ -22,7 +31,7 @@
   margin-bottom: 20px;
 }
 
-a {
+.banner a {
   color: #222222;
   text-decoration: none;
   background-color: white;
@@ -37,3 +46,16 @@ a {
 #red-word {
   color: rgb(254, 74, 74);
 }
+
+.controls-top {
+  margin-left: 332px;
+  margin-bottom: 10px;
+}
+
+.carousel-indicators {
+  color: black;
+}
+.btn-floating {
+  color: #222222;
+}
+
