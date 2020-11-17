@@ -2,4 +2,8 @@
 <h3> <%= @castle.address %></h3>
 <p> Owner: <%= @castle.user.email %></p>
 
-<%= link_to "Book this castle", new_castle_booking_path(@castle.id) %>
+<%= simple_form_for [@castle, @booking] do |f| %>
+  <%= f.input :start_date, as: :date, html5: true %>
+  <%= f.input :end_date, as: :date, html5: true %>
+  <%= f.submit %>
+<% end %>
