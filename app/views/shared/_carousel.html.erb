@@ -2,25 +2,15 @@
     <div class="row mx-auto my-auto">
         <div id="myCarousel" class="carousel slide w-100" data-ride="carousel">
           <div class="row">
-              <div class="col-12">
-                  <a class="carousel-control-prev text-dark" href="#myCarousel" role="button" data-slide="prev">
-                      <span class="fa fa-chevron-left" aria-hidden="true"></span>
-                      <span class="sr-only">Previous</span>
-                  </a>
-                  <a class="carousel-control-next text-dark" href="#myCarousel" role="button" data-slide="next">
-                      <span class="fa fa-chevron-right" aria-hidden="true"></span>
-                      <span class="sr-only">Next</span>
-                  </a>
-              </div>
           </div>
             <div class="carousel-inner" role="listbox">
-                <div class="carousel-item py-5 active">
+                <div class="carousel-item py-2 active">
 
                     <div class="row">
                         <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
                           <div class="card mb-2">
 <!--                             <p class="card-tag-1">Magical</p> -->
-                            <img class="card-img-top" src="https://source.unsplash.com/random?castle/1"
+                            <img class="card-img-top-1" src="https://source.unsplash.com/random?castle/1"
                               alt="Card image cap">
                             <div class="card-body">
                               <h4 class="card-title"><%= @castles[0].name %></h4>
@@ -32,7 +22,7 @@
                         <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
                           <div class="card mb-2">
 <!--                            <p class="card-tag-1">Magical</p> -->
-                            <img class="card-img-top" src="https://source.unsplash.com/random?castle/2"
+                            <img class="card-img-top-1" src="https://source.unsplash.com/random?castle/2"
                               alt="Card image cap">
                             <div class="card-body">
                               <h4 class="card-title"><%= @castles[1].name %></h4>
@@ -43,7 +33,7 @@
                         </div>
                         <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
                           <div class="card mb-2">
-                            <img class="card-img-top" src="https://source.unsplash.com/random?castle/3"
+                            <img class="card-img-top-1" src="https://source.unsplash.com/random?castle/3"
                               alt="Card image cap">
                             <div class="card-body">
                               <h4 class="card-title"><%= @castles[2].name %></h4>
@@ -54,7 +44,7 @@
                         </div>
                         <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
                           <div class="card mb-2">
-                            <img class="card-img-top" src="https://source.unsplash.com/random?castle/4"
+                            <img class="card-img-top-1" src="https://source.unsplash.com/random?castle/4"
                               alt="Card image cap">
                             <div class="card-body">
                               <h4 class="card-title"><%= @castles[3].name %></h4>
@@ -66,12 +56,12 @@
                     </div>
                 </div>
 
-                <div class="carousel-item py-5">
+                <div class="carousel-item py-2">
                     <div class="row">
                         <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
                           <div class="card mb-2">
 <!--                             <p class="card-tag-2">Enchanting</p> -->
-                            <img class="card-img-top" src="https://source.unsplash.com/random?castle/5"
+                            <img class="card-img-top-1" src="https://source.unsplash.com/random?castle/5"
                               alt="Card image cap">
                             <div class="card-body">
                               <h4 class="card-title"><%= @castles[4].name %></h4>
@@ -83,7 +73,7 @@
                         <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
                           <div class="card mb-2">
 <!--                             <p class="card-tag-2">Enchanting</p> -->
-                            <img class="card-img-top" src="https://source.unsplash.com/random?castle/6"
+                            <img class="card-img-top-1" src="https://source.unsplash.com/random?castle/6"
                               alt="Card image cap">
                             <div class="card-body">
                               <h4 class="card-title"><%= @castles[5].name %></h4>
@@ -94,7 +84,7 @@
                         </div>
                         <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
                           <div class="card mb-2">
-                            <img class="card-img-top" src="https://source.unsplash.com/random?castle/7"
+                            <img class="card-img-top-1" src="https://source.unsplash.com/random?castle/7"
                               alt="Card image cap">
                             <div class="card-body">
                               <h4 class="card-title"><%= @castles[6].name %></h4>
@@ -105,7 +95,7 @@
                         </div>
                         <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
                           <div class="card mb-2">
-                            <img class="card-img-top" src="https://source.unsplash.com/random?castle/1"
+                            <img class="card-img-top-1" src="https://source.unsplash.com/random?castle/1"
                               alt="Card image cap">
                             <div class="card-body">
                               <h4 class="card-title"><%= @castles[0].name %></h4>
@@ -119,5 +109,15 @@
 
             </div>
         </div>
+    </div>
+    <div class="col-12">
+        <a class="carousel-control-prev text-dark" href="#myCarousel" role="button" data-slide="prev">
+            <span class="fa fa-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next text-dark" href="#myCarousel" role="button" data-slide="next">
+            <span class="fa fa-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
     </div>
 </div>
