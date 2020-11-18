@@ -5,7 +5,7 @@
 <%end%>
 
 <br>
- <br>
+<br>
 
 <%= link_to 'sign out',  destroy_user_session_path, method: :delete,
             data: { confirm: "Are you sure?" }%>
@@ -29,25 +29,52 @@
 
 <!-- Content for lower half of the page including a 3 card carousel -->
 <h3 class = "text-center">Our <strong id="red-word">top picks</strong> from <strong id="red-word">legendary hosts</strong> around the world </h3>
+<!--/.Castle Cards-->
+    <div class="card-container">
+      <div class="animated-card">
+          <img src="https://images.unsplash.com/photo-1597466599360-3b9775841aec?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1300&q=80" alt="Sora" class="card-img-top">
+          <div class="card-body">
+              <h5 class="card-title"><%= @castles[8].name %></h5>
+              <p class="card-text">£<%= @castles[8].price_per_night %></p>
+              <a href="#" class="btn-explore">More</a>
+          </div>
+      </div>
+      <div class="animated-card">
+          <img src="https://images.unsplash.com/photo-1572942586715-44e0aedbe305?ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80" alt="Umi" class="card-img-top">
+          <div class="card-body">
+              <h5 class="card-title"><%= @castles[9].name %></h5>
+              <p class="card-text">£<%= @castles[9].price_per_night %></p>
+              <a href="#" class="btn-explore">More</a>
+          </div>
+      </div>
+      <div class="animated-card">
+          <img src="https://images.unsplash.com/photo-1515356619894-b89131037e3d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2550&q=80" alt="Mori" class="card-img-top">
+          <div class="card-body">
+              <h5 class="card-title"><%= @castles[10].name %></h5>
+              <p class="card-text">£<%= @castles[10].price_per_night %></p>
+              <a href="#" class="btn-explore">More</a>
+          </div>
+      </div>
+    </div>
 
-<div class="container py-5">
+<div class="container">
 
 <!--Carousel Wrapper-->
-<div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
+  <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
 
   <!--Controls-->
-  <div class="controls-top">
-    <a class="btn-floating" href="#multi-item-example" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
-    <a class="btn-floating" href="#multi-item-example" data-slide="next"><i class="fa fa-chevron-right"></i></a>
-  </div>
+    <div class="controls-top">
+      <a class="btn-floating" href="#multi-item-example" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
+      <a class="btn-floating" href="#multi-item-example" data-slide="next"><i class="fa fa-chevron-right"></i></a>
+    </div>
   <!--/.Controls-->
 
   <!--Indicators-->
-  <ol class="carousel-indicators">
-    <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
-    <li data-target="#multi-item-example" data-slide-to="1"></li>
-    <li data-target="#multi-item-example" data-slide-to="2"></li>
-  </ol>
+    <ol class="carousel-indicators">
+      <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
+      <li data-target="#multi-item-example" data-slide-to="1"></li>
+      <li data-target="#multi-item-example" data-slide-to="2"></li>
+    </ol>
   <!--/.Indicators-->
 
   <!--Slides-->
@@ -171,5 +198,9 @@
   </div>
   <!--/.Slides-->
 
+
+
+  </div>
 </div>
+
 </div>
