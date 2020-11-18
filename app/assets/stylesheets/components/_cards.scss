@@ -46,3 +46,37 @@
 //   padding-left: 15px;
 //   padding-right: 15px;
 // }
+
+.booking-card  {
+  display: flex;
+  width: 800px;
+  margin: 0 auto;
+
+  .castle-img {
+    margin: 10px;
+    margin-left: 0;
+    width: 400px;
+    height: 200px;
+    background-color: grey;
+    border-radius: 0 10px 10px 0;
+    box-shadow: 3px 5px 5px rgb(224, 224, 224);
+  }
+}
+
+.booking-info {
+  width: 600px;
+  background-color: white;
+  padding: 20px;
+  margin: 10px;
+  margin-right: 0;
+  border-radius: 10px 0 0 10px;
+  box-shadow: 3px 5px 5px rgb(224, 224, 224);
+
+  .dates {
+    display: flex;
+
+    p {
+      padding-right: 10px;
+    }
+  }
+}

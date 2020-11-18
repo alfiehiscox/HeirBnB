@@ -1,5 +1,10 @@
 class BookingsController < ApplicationController
-  
+
+  # This is bookings filtered to the current user
+  def index
+    @bookings = Booking.where(user_id: current_user)
+  end
+
   def create
     @booking = Booking.new(booking_params)
     @booking.user = current_user
