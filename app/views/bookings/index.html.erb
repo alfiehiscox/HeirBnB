@@ -5,6 +5,9 @@
   </div>
 </div>
 
+<br>
+<br>
+
 <div class="container">
   <h3 class="text-center">All bookings for: ( <%= current_user.email %> )</h3>
   <% if @bookings.empty? %>
@@ -15,7 +18,7 @@
     <% @bookings.each do |booking| %>
       <div class="booking-card">
         <div class="booking-info">
-          <h3> <%= booking.castle.name %> </h3>
+          <h3> <%= link_to "#{booking.castle.name}", castle_path(booking.castle.id) %> </h3>
           <p> Booked for: <%= booking.user.email %> </p>
           <div class="dates">
             <p> When: </p>
