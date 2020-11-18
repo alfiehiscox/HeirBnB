@@ -1,8 +1,8 @@
-<h1>All your bookings</h1>
+<h1>All your bookings ( <%= current_user.email %> )</h1>
 <% @bookings.each do |booking| %>
-  <h3><%= @booking.castle %></h3>
-  <p> Book for: <%= @booking.user %> </p>
+  <h3>Castle: <%= booking.castle.name %></h3>
+  <p> Book for: <%= booking.user.email %> </p>
   <p> Start Date: <%= booking.start_date %></p>
   <p> End Date: <%= booking.end_date %></p>
   <p>Contact for owner of Castle: <%= booking.castle.user.email %> </p>
-<%= end %>
+<% end %>
