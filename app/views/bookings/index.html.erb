@@ -27,9 +27,35 @@
             <p> <strong><%= booking.end_date.strftime("%d/%m/%Y") %></strong> </p>
           </div>
           <p>Castle Owner: <%= booking.castle.user.email %> </p>
+          <p>Status: <%= booking.status %></p>
         </div>
         <div class="castle-img"></div>
       </div>
+    <% end %>
+  <% end %>
+
+  <h3 class="text-center m-3">My Castle Bookings</h3>
+  <% if @castles.empty? %>
+    <div class="empty-bookings">
+      <p class="text-center p-3 m-3">You don't have any castles!</p>
+    </div>
+  <% else %>
+    <% @castles.each do |castle| %>
+      <h3> <%= castle.name %> - Bookings</h3>
+      <% if castle.bookings.empty? %>
+        <p class="text-center p-3 m-3">This castle has no bookings!</p>
+      <% else %>
+        <% castle.bookings.each do |booking| %>
+           <p> <%= booking.user.email %></p>
+           <p><%= booking.start_date %></p>
+           <p> <%= booking.end_date %> </p>
+           <p> <%= booking.status %></p>
+           <% if booking.status == "pending"  %>
+            <%= link_to "confirm booking", confirm_booking_path(booking.id), method: :post, class: "btn btn-success" %>
+            <%= link_to "decline booking", decline_booking_path(booking.id), method: :post, class: "btn btn-danger" %>
+           <% end %>
+        <% end %>
+      <% end %>
     <% end %>
   <% end %>
 </div>
