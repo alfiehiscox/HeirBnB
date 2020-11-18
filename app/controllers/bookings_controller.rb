@@ -3,6 +3,7 @@ class BookingsController < ApplicationController
   # This is bookings filtered to the current user
   def index
     @bookings = Booking.where(user_id: current_user)
+    @castles = Castle.where(user_id: current_user)
   end
 
   def create
@@ -20,6 +21,20 @@ class BookingsController < ApplicationController
 
   def show
     @booking = Booking.find(params[:id])
+  end
+
+  def confirm
+    booking = Booking.find(params[:id])
+    booking.status = "confirmed"
+    booking.save
+    redirect_to bookings_path
+  end
+
+  def decline
+    booking = Booking.find(params[:id])
+    booking.status = "declined"
+    booking.save
+    redirect_to bookings_path
   end
 
   private
