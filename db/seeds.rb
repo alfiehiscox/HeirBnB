@@ -7,7 +7,7 @@ puts "Destroying All Users..."
 User.destroy_all
 
 puts "Creating Users..."
-3.times do
+5.times do
   user = User.new
   user.email = Faker::Internet.email
   user.password = "password"
@@ -17,10 +17,11 @@ puts "Creating Users..."
 end
 
 puts "Creating Castles..."
-12.times do
+prefixes = ["Castle ", "Fort ", "Keep ", "Chateau ", "Tower ", 'Palace ']
+15.times do
   castle = Castle.new
-  castle.name = Faker::Movies::LordOfTheRings.location
-  castle.address = Faker::Movies::StarWars.planet
+  castle.name = "#{prefixes.sample}#{Faker::Artist.name}"
+  castle.address = "#{Faker::Address.street_address}, #{Faker::Address.city}"
   users = User.all
   castle.user = User.find(users.sample.id)
   castle.price_per_night = rand(1..1000)
