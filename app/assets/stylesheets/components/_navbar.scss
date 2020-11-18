@@ -1,6 +1,17 @@
 .navbar-lewagon {
   justify-content: space-between;
   background: white;
+  box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
+  transition: all 0.3s ease;
+  height: 60px;
+  padding: 0px 30px;
+  align-items: center;
+  display: flex;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  z-index: 1;
+  width: 100%;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -13,4 +24,8 @@
 
 .navbar-brand {
   border-radius: 10px;
+}
+
+.crown-logo {
+  color: rgb(254, 75, 74);
 }
