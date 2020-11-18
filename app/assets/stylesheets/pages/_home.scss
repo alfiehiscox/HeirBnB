@@ -2,12 +2,12 @@
 .banner {
   color: white;
   text-align: center;
-  height: 80vh;
+  height: 60vh;
   background-size: cover !important;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 30px;
+  margin-bottom: 0px;
 }
 
 .banner h1 {
@@ -25,5 +25,17 @@
 
 #red-word {
   color: rgb(254, 74, 74);
+}
+
+.container-1 {
+  background-color: rgb(239, 242, 233);
+}
+
+.container-1 h3{
+  padding-top: 25px;
+}
+
+.card-container {
+  background-color: rgb(239, 242, 233);
 }
 
