@@ -9,5 +9,34 @@
 
 <!-- Content for lower half of the page including a 3 card carousel -->
 <h3 class = "text-center">Our <strong id="red-word">top picks</strong> from <strong id="red-word">legendary hosts</strong> around the world </h3>
+
+<!--/.Castle Cards-->
+    <div class="card-container">
+      <div class="animated-card">
+          <img src="https://images.unsplash.com/photo-1597466599360-3b9775841aec?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1300&q=80" alt="Sora" class="card-img-top">
+          <div class="card-body">
+              <h5 class="card-title"><%= @castles[8].name %></h5>
+              <p class="card-text">£<%= @castles[8].price_per_night %></p>
+              <a href="#" class="btn-explore">More</a>
+          </div>
+      </div>
+      <div class="animated-card">
+          <img src="https://images.unsplash.com/photo-1572942586715-44e0aedbe305?ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80" alt="Umi" class="card-img-top">
+          <div class="card-body">
+              <h5 class="card-title"><%= @castles[9].name %></h5>
+              <p class="card-text">£<%= @castles[9].price_per_night %></p>
+              <a href="#" class="btn-explore">More</a>
+          </div>
+      </div>
+      <div class="animated-card">
+          <img src="https://images.unsplash.com/photo-1515356619894-b89131037e3d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2550&q=80" alt="Mori" class="card-img-top">
+          <div class="card-body">
+              <h5 class="card-title"><%= @castles[10].name %></h5>
+              <p class="card-text">£<%= @castles[10].price_per_night %></p>
+              <a href="#" class="btn-explore">More</a>
+          </div>
+      </div>
+    </div>
+
 <%= render "shared/carousel" %>
 
