@@ -1,0 +1,48 @@
+// Card Styling in the Carousel
+
+.card {
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.card-img-top {
+    width: 100%;
+    height: 10vw;
+    object-fit: cover;
+}
+
+.card-title {
+  font-size: 16px;
+  margin-bottom: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: bold;
+}
+
+.card-text {
+ font-size: 14px;
+}
+
+// .card-tag-1 {
+//   font-size: 14px;
+//   border-radius: 4px;
+//   position: absolute;
+//   bottom: 300px;
+//   right: 165px;
+//   background-color:rgba(252, 248, 245, 0.8);
+//   color: black;
+//   padding-left: 15px;
+//   padding-right: 15px;
+// }
+
+// .card-tag-2 {
+//   font-size: 14px;
+//   border-radius: 4px;
+//   position: absolute;
+//   bottom: 345px;
+//   right: 140px;
+//   background-color:rgba(252, 248, 245, 0.8);
+//   color: black;
+//   padding-left: 15px;
+//   padding-right: 15px;
+// }
