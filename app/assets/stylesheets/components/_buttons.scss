@@ -23,3 +23,26 @@
   background: rgb(216, 64, 63);
   color: white;
 }
+
+.btn-sign-up {
+  font-family: "Lora", "Helvetica", "sans-serif";
+  color: white;
+  text-align: center;
+  padding: 4px 14px;
+  border-radius: 4px;
+  background: rgb(254, 75, 74);
+  transition: background 0.3s ease;
+  width: 100%;
+  height: 58px;
+}
+
+.btn-sign-up:hover {
+  background: rgb(216, 64, 63);
+  color: white;
+}
+
+.container-signing {
+  width: 1110px;
+  margin: 0 auto;
+  min-height: 550px;
+}

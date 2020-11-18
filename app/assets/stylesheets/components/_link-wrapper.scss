@@ -1,0 +1,20 @@
+.link-wrapper {
+  margin-top: 10px;
+  color: white;
+  text-align: center;
+  padding: 4px 14px;
+  border-radius: 4px;
+  background: rgb(254, 75, 74);
+  transition: background 0.3s ease;
+  a {
+    text-decoration: none;
+    color: white;
+  }
+
+  &:hover {
+    background: rgb(216, 64, 63);
+    color: white;
+  }
+}
+
+
