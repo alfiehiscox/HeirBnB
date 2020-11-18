@@ -11,7 +11,7 @@ class BookingsController < ApplicationController
     @booking.castle = Castle.find(params[:castle_id])
     if @booking.save
       # redirect_to castle_booking_path(params[:castle_id], @booking.id)
-      redirect_to bookings_castles_path
+      redirect_to bookings_path
     else
       @castle = Castle.find(params[:castle_id])
       render :template => "castles/show"

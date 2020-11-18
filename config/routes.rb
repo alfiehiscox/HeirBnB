@@ -4,8 +4,15 @@ Rails.application.routes.draw do
   resources :castles, only: [:show, :create, :new] do
     resources :bookings, only: [:show, :create]
 
-    collection do
-      get :bookings, to: "bookings#index"
+    # collection do
+    #   get :bookings, to: "bookings#index"
+    # end
+  end
+
+  resources :bookings, only: [:index] do
+    member do
+      post "confirm", to: "bookings#confirm"
+      post "decline", to: "bookings#decline"
     end
   end
 
