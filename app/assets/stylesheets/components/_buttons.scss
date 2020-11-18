@@ -1,0 +1,25 @@
+.btn-login {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: rgb(254, 75, 74);
+  transition: background 0.3s ease;
+}
+
+.btn-login:hover {
+  background: rgb(216, 64, 63);
+  color: white;
+}
+
+.btn-explore {
+  color: white;
+  padding: 4px 14px;
+  border-radius: 4px;
+  background: rgb(254, 75, 74);
+  transition: background 0.3s ease;
+}
+
+.btn-explore:hover {
+  background: rgb(216, 64, 63);
+  color: white;
+}
