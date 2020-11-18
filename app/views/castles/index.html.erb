@@ -1,27 +1,13 @@
-<% content_for :head do %>
-  <meta name="turbolinks-cache-control" content="no-cache">
-<% end %>
-
 <!-- Content for the banner -->
-
 <div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.3) 0%, rgba(0,36,61,0.4) 50%), url('https://images.unsplash.com/photo-1510480248785-c4483daedb19?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1756&q=80')">
   <div class="banner-content">
-    <h1>Heirbnb</h1>
-
-    <p>Your kingdom awaits you</p>
-
+    <h1>HeirBnb</h1>
+    <p>Your Kingdom Awaits</p>
     <%= link_to 'Log in', new_user_session_path, class: "btn btn-login" %>
-
   </div>
 </div>
 
 <!-- Content for lower half of the page including a 3 card carousel -->
 <h3 class = "text-center">Our <strong id="red-word">top picks</strong> from <strong id="red-word">legendary hosts</strong> around the world </h3>
-
 <%= render "shared/carousel" %>
 
-<div class="scroller">
-  <div>1</div>
-  <div>2</div>
-  <div>3</div>
-</div>

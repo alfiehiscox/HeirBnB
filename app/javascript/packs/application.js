@@ -34,3 +34,6 @@ import "../styles/application.scss"
 document.addEventListener("turbolinks:load", function() {
   $('.scroller').slick()
 })
+
+
+

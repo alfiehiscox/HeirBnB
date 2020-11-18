@@ -1,143 +1,123 @@
-<div class="container py-5">
-
-<!--Carousel Wrapper-->
-<div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
-
-  <!--Controls-->
-  <div class="controls-top">
-    <a class="btn-floating" href="#multi-item-example" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
-    <a class="btn-floating" href="#multi-item-example" data-slide="next"><i class="fa fa-chevron-right"></i></a>
-  </div>
-  <!--/.Controls-->
-
-  <!--Indicators-->
-  <ol class="carousel-indicators">
-    <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
-    <li data-target="#multi-item-example" data-slide-to="1"></li>
-    <li data-target="#multi-item-example" data-slide-to="2"></li>
-  </ol>
-  <!--/.Indicators-->
-
-  <!--Slides-->
-  <div class="carousel-inner" role="listbox">
-
-    <!--First slide-->
-    <div class="carousel-item active">
-
-      <div class="row">
-
-        <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
-          <div class="card mb-2">
-            <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg"
-              alt="Card image cap">
-            <div class="card-body">
-              <h4 class="card-title"><%= @castles[0].name %></h4>
-              <p class="card-text">£<%= @castles[0].price_per_night %></p>
-              <%= link_to "Explore", "#", class: "btn btn-explore" %>
+<div class="container my-3">
+    <div class="row mx-auto my-auto">
+        <div id="myCarousel" class="carousel slide w-100" data-ride="carousel">
+          <div class="row">
+              <div class="col-12">
+                  <a class="carousel-control-prev text-dark" href="#myCarousel" role="button" data-slide="prev">
+                      <span class="fa fa-chevron-left" aria-hidden="true"></span>
+                      <span class="sr-only">Previous</span>
+                  </a>
+                  <a class="carousel-control-next text-dark" href="#myCarousel" role="button" data-slide="next">
+                      <span class="fa fa-chevron-right" aria-hidden="true"></span>
+                      <span class="sr-only">Next</span>
+                  </a>
               </div>
           </div>
-        </div>
+            <div class="carousel-inner" role="listbox">
+                <div class="carousel-item py-5 active">
 
-        <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
-          <div class="card mb-2">
-            <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(35).jpg"
-              alt="Card image cap">
-            <div class="card-body">
-              <h4 class="card-title"><%= @castles[1].name %></h4>
-              <p class="card-text">£<%= @castles[1].price_per_night %></p>
-              <%= link_to "Explore", "#", class: "btn btn-explore" %>
-              </div>
-          </div>
-        </div>
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                          <div class="card mb-2">
+<!--                             <p class="card-tag-1">Magical</p> -->
+                            <img class="card-img-top" src="https://source.unsplash.com/random?castle/1"
+                              alt="Card image cap">
+                            <div class="card-body">
+                              <h4 class="card-title"><%= @castles[0].name %></h4>
+                              <p class="card-text">£<%= @castles[0].price_per_night %> <em>per night</em></p>
+                              <%= link_to "Explore", "#", class: "btn btn-explore" %>
+                              </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                          <div class="card mb-2">
+<!--                            <p class="card-tag-1">Magical</p> -->
+                            <img class="card-img-top" src="https://source.unsplash.com/random?castle/2"
+                              alt="Card image cap">
+                            <div class="card-body">
+                              <h4 class="card-title"><%= @castles[1].name %></h4>
+                              <p class="card-text">£<%= @castles[1].price_per_night %> <em>per night</em></p>
+                              <%= link_to "Explore", "#", class: "btn btn-explore" %>
+                              </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                          <div class="card mb-2">
+                            <img class="card-img-top" src="https://source.unsplash.com/random?castle/3"
+                              alt="Card image cap">
+                            <div class="card-body">
+                              <h4 class="card-title"><%= @castles[2].name %></h4>
+                              <p class="card-text">£<%= @castles[2].price_per_night %> <em>per night</em></p>
+                              <%= link_to "Explore", "#", class: "btn btn-explore" %>
+                              </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                          <div class="card mb-2">
+                            <img class="card-img-top" src="https://source.unsplash.com/random?castle/4"
+                              alt="Card image cap">
+                            <div class="card-body">
+                              <h4 class="card-title"><%= @castles[3].name %></h4>
+                              <p class="card-text">£<%= @castles[3].price_per_night %> <em>per night</em></p>
+                              <%= link_to "Explore", "#", class: "btn btn-explore" %>
+                              </div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
 
-        <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
-          <div class="card mb-2">
-            <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(35).jpg"
-              alt="Card image cap">
-            <div class="card-body">
-              <h4 class="card-title"><%= @castles[2].name %></h4>
-              <p class="card-text">£<%= @castles[2].price_per_night %></p>
-              <%= link_to "Explore", "#", class: "btn btn-explore" %>
-           </div>
-          </div>
-        </div>
+                <div class="carousel-item py-5">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                          <div class="card mb-2">
+<!--                             <p class="card-tag-2">Enchanting</p> -->
+                            <img class="card-img-top" src="https://source.unsplash.com/random?castle/5"
+                              alt="Card image cap">
+                            <div class="card-body">
+                              <h4 class="card-title"><%= @castles[4].name %></h4>
+                              <p class="card-text">£<%= @castles[4].price_per_night %> <em>per night</em></p>
+                              <%= link_to "Explore", "#", class: "btn btn-explore" %>
+                              </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                          <div class="card mb-2">
+<!--                             <p class="card-tag-2">Enchanting</p> -->
+                            <img class="card-img-top" src="https://source.unsplash.com/random?castle/6"
+                              alt="Card image cap">
+                            <div class="card-body">
+                              <h4 class="card-title"><%= @castles[5].name %></h4>
+                              <p class="card-text">£<%= @castles[5].price_per_night %> <em>per night</em></p>
+                              <%= link_to "Explore", "#", class: "btn btn-explore" %>
+                              </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                          <div class="card mb-2">
+                            <img class="card-img-top" src="https://source.unsplash.com/random?castle/7"
+                              alt="Card image cap">
+                            <div class="card-body">
+                              <h4 class="card-title"><%= @castles[6].name %></h4>
+                              <p class="card-text">£<%= @castles[6].price_per_night %> <em>per night</em></p>
+                              <%= link_to "Explore", "#", class: "btn btn-explore" %>
+                              </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                          <div class="card mb-2">
+                            <img class="card-img-top" src="https://source.unsplash.com/random?castle/1"
+                              alt="Card image cap">
+                            <div class="card-body">
+                              <h4 class="card-title"><%= @castles[0].name %></h4>
+                              <p class="card-text">£<%= @castles[0].price_per_night %> <em>per night</em></p>
+                              <%= link_to "Explore", "#", class: "btn btn-explore" %>
+                              </div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
 
-        <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
-          <div class="card mb-2">
-            <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(35).jpg"
-              alt="Card image cap">
-            <div class="card-body">
-              <h4 class="card-title"><%= @castles[3].name %></h4>
-              <p class="card-text">£<%= @castles[3].price_per_night %></p>
-              <%= link_to "Explore", "#", class: "btn btn-explore" %>
             </div>
-          </div>
         </div>
-      </div>
-
     </div>
-    <!--/.First slide-->
-
-    <!--Second slide-->
-    <div class="carousel-item">
-
-      <div class="row">
-
-        <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
-          <div class="card mb-2">
-            <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(47).jpg"
-              alt="Card image cap">
-            <div class="card-body">
-              <h4 class="card-title"><%= @castles[4].name %></h4>
-              <p class="card-text">£<%= @castles[4].price_per_night %></p>
-              <%= link_to "Explore", "#", class: "btn btn-explore" %>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
-          <div class="card mb-2">
-            <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(48).jpg"
-              alt="Card image cap">
-            <div class="card-body">
-              <h4 class="card-title"><%= @castles[5].name %></h4>
-              <p class="card-text">£<%= @castles[5].price_per_night %></p>
-              <%= link_to "Explore", "#", class: "btn btn-explore" %>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
-          <div class="card mb-2">
-            <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(48).jpg"
-              alt="Card image cap">
-            <div class="card-body">
-              <h4 class="card-title"><%= @castles[6].name %></h4>
-              <p class="card-text">£<%= @castles[6].price_per_night %></p>
-              <%= link_to "Explore", "#", class: "btn btn-explore" %>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
-          <div class="card mb-2">
-            <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(35).jpg"
-              alt="Card image cap">
-            <div class="card-body">
-              <h4 class="card-title"><%= @castles[7].name %></h4>
-              <p class="card-text">£<%= @castles[7].price_per_night %></p>
-              <%= link_to "Explore", "#", class: "btn btn-explore" %>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-    <!--/.Second slide-->
-
-  </div>
-  <!--/.Slides-->
-
-</div>
 </div>
