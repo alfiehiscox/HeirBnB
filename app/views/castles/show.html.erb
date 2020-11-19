@@ -5,8 +5,12 @@
     <h1>Welcome to <%= @castle.name %></h1>
     <h3> <%= @castle.address %></h3>
     <p> Owner: <%= @castle.user.email %></p>
-    <div >
-      <%= cl_image_tag @castle.photo.key, height: 300, width: 400, crop: :fill %>
+    <div>
+      <% if @castle.photo.attached? %>
+        <%= cl_image_tag @castle.photo.key, height: 300, width: 400, crop: :fill %>
+      <% else %>
+        <p>You have no photo</p>
+      <% end %>
     </div>
 
   <%= link_to "Back", root_path, class: "btn btn-danger" %>
