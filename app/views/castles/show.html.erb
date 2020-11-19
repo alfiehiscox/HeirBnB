@@ -6,8 +6,7 @@
     <h3> <%= @castle.address %></h3>
     <p> Owner: <%= @castle.user.email %></p>
     <div >
-      <% images =["https://images.unsplash.com/photo-1597466599360-3b9775841aec?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1300&q=80", "https://images.unsplash.com/photo-1572942586715-44e0aedbe305?ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80", "https://images.unsplash.com/photo-1515356619894-b89131037e3d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2550&q=80"]%>
-    <img src="<%= images.sample %>" alt="Sora" class="card-img-top">
+      <%= cl_image_tag @castle.photo.key, height: 300, width: 400, crop: :fill %>
     </div>
 
 
