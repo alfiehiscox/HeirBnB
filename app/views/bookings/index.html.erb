@@ -9,7 +9,7 @@
 <br>
 
 <div class="container">
-  <h3 class="text-center">All bookings for: ( <%= current_user.email %> )</h3>
+  <h3 class="text-center mb-3">All bookings for: ( <%= current_user.email %> )</h3>
   <% if @bookings.empty? %>
     <div class="empty-bookings">
       <p class="text-center p-3 m-3">You have no current bookings!</p>
@@ -18,7 +18,7 @@
     <% @bookings.each do |booking| %>
       <div class="booking-card">
         <div class="booking-info">
-          <h3> <%= link_to "#{booking.castle.name}", castle_path(booking.castle.id) %> </h3>
+          <h3 id="brand-color"> <%= link_to "#{booking.castle.name}", castle_path(booking.castle.id) %> </h3>
           <p> Booked for: <%= booking.user.email %> </p>
           <div class="dates">
             <p> When: </p>
@@ -27,35 +27,61 @@
             <p> <strong><%= booking.end_date.strftime("%d/%m/%Y") %></strong> </p>
           </div>
           <p>Castle Owner: <%= booking.castle.user.email %> </p>
-          <p>Status: <%= booking.status %></p>
+          <p>Status: <%= booking.status %>
+            <% if booking.status == "pending" %>
+            <i id="orange" class="far fa-clock"> </i>
+            <% elsif booking.status == "confirmed" %>
+            <i id="green" class="far fa-check-circle"></i>
+            <% else %>
+            <i id="red" class="far fa-times-circle"></i>
+            <% end %>
+          </p>
+
         </div>
+        <% if booking.castle.photo.attached? %>
+          <div class="castle-img" style="background-image: url('<%= cl_image_path booking.castle.photo.key, crop: :fill %>')">
+        </div>
+        <% else %>
         <div class="castle-img"></div>
+        <% end %>
       </div>
     <% end %>
   <% end %>
 
-  <h3 class="text-center m-3">My Castle Bookings</h3>
+  <h3 class="text-center m-3 mt-3">My Castle Bookings</h3>
   <% if @castles.empty? %>
     <div class="empty-bookings">
-      <p class="text-center p-3 m-3">You don't have any castles!</p>
+      <p class="text-center py-3">You don't have any castles!</p>
     </div>
   <% else %>
     <% @castles.each do |castle| %>
-      <h3> <%= castle.name %> - Bookings</h3>
+      <h3 id="brand-color" class="text-center mt-3"> <%= castle.name %> - Bookings</h3>
       <% if castle.bookings.empty? %>
-        <p class="text-center p-3 m-3">This castle has no bookings!</p>
+        <p class="text-center py-3 my-booking">This castle has no bookings!</p>
       <% else %>
-        <% castle.bookings.each do |booking| %>
-           <p> <%= booking.user.email %></p>
-           <p><%= booking.start_date %></p>
-           <p> <%= booking.end_date %> </p>
-           <p> <%= booking.status %></p>
-           <% if booking.status == "pending"  %>
-            <%= link_to "confirm booking", confirm_booking_path(booking.id), method: :post, class: "btn btn-success" %>
-            <%= link_to "decline booking", decline_booking_path(booking.id), method: :post, class: "btn btn-danger" %>
-           <% end %>
+      <div class="my-booking-container">
+          <% castle.bookings.each do |booking| %>
+          <div class="my-booking">
+             <p> <i id="email" class="far fa-envelope"></i> <%= booking.user.email %></p>
+             <p> <i id="email" class="far fa-calendar-alt"></i> <%= booking.start_date %> -</p>
+             <p> <i id="email" class="far fa-calendar-alt"></i> <%= booking.end_date %> </p>
+             <p><%= booking.status %>
+             <% if booking.status == "pending" %>
+            <i id="orange" class="far fa-clock"> </i>
+            <% elsif booking.status == "confirmed" %>
+            <i id="green" class="far fa-check-circle"></i>
+            <% else %>
+            <i id="red" class="far fa-times-circle"></i>
+            <% end %> </p>
+             <% if booking.status == "pending"  %>
+             <%= link_to "confirm booking", confirm_booking_path(booking.id), method: :post, class: "btn btn-success" %>
+             <%= link_to "decline booking", decline_booking_path(booking.id), method: :post, class: "btn btn-danger" %>
+             <% end %>
+          </div>
         <% end %>
+      </div>
       <% end %>
     <% end %>
   <% end %>
+
 </div>

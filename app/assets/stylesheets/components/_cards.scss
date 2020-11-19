@@ -13,7 +13,7 @@
     height: 10vw;
     object-fit: cover;
     border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 .card-title {
@@ -52,6 +52,24 @@
 //   padding-left: 15px;
 //   padding-right: 15px;
 // }
+.my-booking-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 12px;
+  flex-grow: 1;
+  width: 1110px;
+  margin: 0 auto;
+}
+
+.my-booking {
+  width: 300px;
+  background-color: white;
+  padding: 10px;
+  margin: 10px auto;
+  border-radius: 10px;
+  box-shadow: 3px 5px 5px rgb(224, 224, 224);
+  text-align: center;
+}
 
 .booking-card  {
   display: flex;
@@ -59,10 +77,11 @@
   margin: 0 auto;
 
   .castle-img {
+    background-size: cover;
     margin: 10px;
     margin-left: 0;
     width: 400px;
-    height: 200px;
+    height: 220px;
     background-color: grey;
     border-radius: 0 10px 10px 0;
     box-shadow: 3px 5px 5px rgb(224, 224, 224);
@@ -71,6 +90,7 @@
 
 .booking-info {
   width: 600px;
+  height: 220px;
   background-color: white;
   padding: 20px;
   margin: 10px;
@@ -85,4 +105,29 @@
       padding-right: 10px;
     }
   }
+}
+
+#email {
+  color:rgb(254, 75, 74);
+  font-size: 18px;
+}
+
+#green {
+  color: green;
+  font-size: 18px;
+}
+
+#red {
+  color: red;
+  font-size: 18px;
+}
+
+#orange {
+  color: orange;
+  font-size: 18px;
+}
+
+#brand-color a {
+  text-decoration: none;
+  color: rgb(254, 75, 74);
 }
