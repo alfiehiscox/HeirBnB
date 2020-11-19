@@ -2,10 +2,29 @@
 <br>
 <br>
 
-<%= @castles.each do |castle| %>
-  <div>
-    <p><%= castle.name %></p>
-    <p><%= castle.address %></p>
-  </div
-<% end %>
+<div class="container">
+  <div class="grid-banner">
+    <h2 class="p-3">All the castles</h2>
+    <%= form_tag castles_path, method: :get do %>
+      <%= text_field_tag :query, params[:query], class: "grid-search-input", placeholder: "Where to?" %>
+      <%= submit_tag "Search", class: "grid-seach-btn" %>
+    <% end %>
+  </div>
+  <div class="castles-grid">
+    <% @castles.reverse.each do |castle| %>
+      <div class="card mb-2">
+      <% if castle.photo.attached? %>
+        <%= cl_image_tag castle.photo.key, height: 275, crop: :fill %>
+      <% else %>
+         <div class="empty-grid-img">No Photo</div>
+      <% end %>
+        <div class="card-body">
+          <h4 class="card-title"><%= castle.name %></h4>
+          <p class="card-text">£<%= castle.price_per_night %> <em>per night</em></p>
+          <%= link_to "Explore", castle_path(castle.id) , class: "btn btn-explore" %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
 

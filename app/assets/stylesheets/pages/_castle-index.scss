@@ -1,0 +1,53 @@
+.castles-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+
+  img {
+    border-radius: 10px 10px 0 0;
+  }
+}
+
+@media(max-width: 992px) {
+  .castles-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media(max-width: 767px) {
+  .castles-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.empty-grid-img {
+  height: 275px;
+  background-color: grey;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 10px 10px 0 0;
+}
+
+.grid-banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.grid-search-input {
+  border-radius: 10px;
+  border-style: none;
+  width: 300px;
+  height: 35px;
+  margin: 10px;
+  margin-right: 0;
+}
+
+.grid-seach-btn {
+  margin: 0;
+  height: 35px;
+  background-color: white;
+  border-style: none;
+  border-radius: 10px;
+}
