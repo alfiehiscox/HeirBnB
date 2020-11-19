@@ -20,7 +20,7 @@ castle_address = ["Castlehill, Edinburgh", "Windsor, SL4 1NJ", "Castle Hill Road
 
 puts "Creating Castles..."
 prefixes = ["Castle ", "Fort ", "Keep ", "Chateau ", "Tower ", 'Palace ']
-15.times do
+5.times do
   castle = Castle.new
   castle.name = "#{prefixes.sample}#{Faker::Artist.name}"
   # castle.address = "#{Faker::Address.street_address}, #{Faker::Address.city}"

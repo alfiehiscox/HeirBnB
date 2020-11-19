@@ -1,0 +1,30 @@
+.castles-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+
+  img {
+    border-radius: 10px 10px 0 0;
+  }
+}
+
+@media(max-width: 992px) {
+  .castles-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media(max-width: 767px) {
+  .castles-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.empty-grid-img {
+  height: 275px;
+  background-color: grey;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 10px 10px 0 0;
+}
