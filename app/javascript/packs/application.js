@@ -21,6 +21,7 @@ require("channels")
 // ----------------------------------------------------
 
 // External imports
+import { initMapbox } from '../plugins/init_mapbox';
 import "bootstrap";
 var $ = require( "jquery" )
 require("slick-carousel")
@@ -33,6 +34,7 @@ import "../styles/application.scss"
 
 document.addEventListener("turbolinks:load", function() {
   $('.scroller').slick()
+  initMapbox();
 })
 
 
