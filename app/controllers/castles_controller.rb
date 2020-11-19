@@ -3,6 +3,10 @@ class CastlesController < ApplicationController
 
   def index
     @castles = Castle.all
+  end
+
+  def homepage
+    @castles = Castle.all
     @counter = rand(6)
   end
 
