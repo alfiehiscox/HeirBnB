@@ -2,7 +2,12 @@ class CastlesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
-    @castles = Castle.all
+    if params[:query].present?
+      sql_query = "name ILIKE :query OR address ILIKE :query"
+      @castles = Castle.where(sql_query, query: "%#{params[:query]}%")
+    else
+      @castles = Castle.all
+    end
   end
 
   def homepage

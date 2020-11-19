@@ -3,7 +3,13 @@
 <br>
 
 <div class="container">
-  <h2 class="p-3">All the castles</h2>
+  <div class="grid-banner">
+    <h2 class="p-3">All the castles</h2>
+    <%= form_tag castles_path, method: :get do %>
+      <%= text_field_tag :query, params[:query], class: "grid-search-input", placeholder: "Where to?" %>
+      <%= submit_tag "Search", class: "grid-seach-btn" %>
+    <% end %>
+  </div>
   <div class="castles-grid">
     <% @castles.reverse.each do |castle| %>
       <div class="card mb-2">
