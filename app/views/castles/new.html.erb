@@ -3,7 +3,7 @@
 
   <%= simple_form_for @castle do |f| %>
     <%= f.input :name %>
-    <%= f.input :address %>
+    <%= f.input :address, :html => {:id => "castle_address"} %>
     <%= f.input :price_per_night %>
     <%= f.submit class: "btn-sign-up" %>
   <% end %>
