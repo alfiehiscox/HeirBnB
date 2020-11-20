@@ -13,13 +13,13 @@
         <h2>Welcome to <%= @castle.name %></h2>
         <strong id="red-word"> <%= @castle.address %> </strong>
         <p> Host: <%= @castle.user.email %></p>
-       
+
         <div class="container my-5">
             <div class="row">
               <%= simple_form_for [@castle, @booking] do |f| %>
               <%= f.input :start_date, as: :date, html5: true %>
               <%= f.input :end_date, as: :date, html5: true %>
-              <%= f.submit %> 
+              <%= f.submit %>
               <% end %>
             </div>
             <br>
@@ -29,7 +29,7 @@
             <div class="cards" style="width: 40rem;">
               <div id="map"
               style="width:90%; height: 280px; border-radius: 10px; align-items: center;"
-              data-marker="<%= @marker.to_json %>"
+              data-markers="<%= @markers.to_json %>"
               data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
               </div>
             </div>
