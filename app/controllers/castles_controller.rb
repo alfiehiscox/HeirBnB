@@ -8,6 +8,14 @@ class CastlesController < ApplicationController
     else
       @castles = Castle.all
     end
+
+
+    @markers = @castles.geocoded.map do |castle|
+      {
+        lat: castle.latitude,
+        lng: castle.longitude
+      }
+    end
   end
 
   def homepage
@@ -32,7 +40,7 @@ class CastlesController < ApplicationController
   def show
     @castle = Castle.find(params[:id])
     @booking = Booking.new
-    @marker = [{ lat: @castle.latitude, lng: @castle.longitude }]
+    @markers = [{ lat: @castle.latitude, lng: @castle.longitude }]
   end
 
   private
