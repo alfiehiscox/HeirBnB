@@ -1,5 +1,5 @@
 class CastlesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:index, :show]
+  skip_before_action :authenticate_user!, only: [:index, :show, :homepage]
 
   def index
     if params[:query].present?
