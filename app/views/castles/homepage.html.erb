@@ -4,9 +4,7 @@
     <i class="fas fa-crown crown-logo" style="font-size: 50px;"></i>
     <h1>HeirBnb</h1>
     <p>Your Kingdom Awaits</p>
-    <% if current_user.nil? %>
-      <%= link_to 'Explore Castles', castles_path, class: "btn btn-login" %>
-    <% end %>
+    <%= link_to 'Explore Castles', castles_path, class: "btn btn-login" %>
   </div>
 </div>
 

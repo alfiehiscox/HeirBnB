@@ -10,6 +10,7 @@
 .btn-login:hover {
   background: rgb(216, 64, 63);
   color: white;
+  animation: pulsate 1s infinite;
 }
 
 .btn-explore {
@@ -19,6 +20,18 @@
   background: rgb(254, 75, 74);
   transition: background 0.3s ease;
   text-decoration: none;
+}
+
+@keyframes pulsate {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 .btn-explore:hover {

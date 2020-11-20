@@ -9,7 +9,6 @@ class CastlesController < ApplicationController
       @castles = Castle.all
     end
 
-
     @markers = @castles.geocoded.map do |castle|
       {
         lat: castle.latitude,
@@ -31,7 +30,7 @@ class CastlesController < ApplicationController
     @castle = Castle.new(castles_params)
     @castle.user = current_user
     if @castle.save
-      redirect_to root_path
+      redirect_to castle_path(@castle.id)
     else
       render :new
     end

@@ -13,29 +13,24 @@
         <h2 id="castle-title"><%= @castle.name %></h2>
         <strong id="red-word"> <%= @castle.address %> </strong>
         <p> Host: <%= @castle.user.email %></p>
-
-        <div class="container my-5">
-            <div class="row">
+            <% if @castle.user != current_user %>
               <%= simple_form_for [@castle, @booking] do |f| %>
-              <p id="red-word">CHECK-IN</p>
-              <%= f.input :start_date, as: :date, html5: true %>
-              <p id="red-word">CHECKOUT</p>
-              <%= f.input :end_date, as: :date, html5: true %>
-              <%= f.submit %>
+                <%= f.input :start_date, as: :date, html5: true %>
+                <%= f.input :end_date, as: :date, html5: true %>
+                <%= f.submit %>
               <% end %>
-            </div>
+            <% end %>
             <br>
             <%= link_to "Back", root_path, class: "btn btn-danger" %>
             <br>
             <br>
             <div class="cards" style="width: 55rem;">
               <div id="map"
-              style="width:90%; height: 280px; border-radius: 10px; align-items: center;"
+              style="width:95%; height: 280px; border-radius: 10px; align-items: center;"
               data-markers="<%= @markers.to_json %>"
               data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
               </div>
             </div>
-          </div>
         </div>
     </div>
 </div>
