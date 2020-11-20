@@ -1,9 +1,13 @@
 <!-- Displays first 3 from castles array -->
 <div class="card-container">
   <div class="row mx-auto my-auto">
-    <% @castles.first(3).to_a.sample((0..99).to_a.sample).each do |castle| %>
+    <% @castles.sample(3).each do |castle| %>
     <div class="animated-card col-lg-4">
-      <%= cl_image_tag castle.photo.key, class: "card-img-top" %>
+      <% if castle.photo.attached? %>
+        <%= cl_image_tag castle.photo.key, class: "card-img-top" %>
+      <% else %>
+         <div class="empty-grid-img"> no photo </div>
+      <% end %>
       <div class="card-body position-relative">
         <h5 class="card-title"><%= castle.name %></h5>
         <p class="card-text">£<%= castle.price_per_night %> <em>per night</em></p>
