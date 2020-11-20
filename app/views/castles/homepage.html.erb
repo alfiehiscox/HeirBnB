@@ -6,6 +6,7 @@
     <p>Your Kingdom Awaits</p>
     <% if current_user.nil? %>
       <%= link_to 'Explore Castles', castles_path, class: "btn btn-login" %>
+    <% else %>
     <% end %>
   </div>
 </div>
