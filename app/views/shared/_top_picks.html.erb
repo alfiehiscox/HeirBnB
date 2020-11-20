@@ -1,0 +1,17 @@
+<!-- Displays first 3 from castles array -->
+<div class="card-container">
+  <div class="row mx-auto my-auto">
+    <% @castles.first(3).to_a.sample((0..99).to_a.sample).each do |castle| %>
+    <div class="animated-card col-lg-4">
+      <%= cl_image_tag castle.photo.key, class: "card-img-top" %>
+      <div class="card-body position-relative">
+        <h5 class="card-title"><%= castle.name %></h5>
+        <p class="card-text">£<%= castle.price_per_night %> <em>per night</em></p>
+        <%= link_to "Book Now", castle_path(castle), class: "btn btn-explore stretched-link" %>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>
+
+<!-- Can't get below cl img tag to work. Prefer to manually choose for top 3 -->
