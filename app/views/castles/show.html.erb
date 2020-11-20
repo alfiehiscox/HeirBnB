@@ -3,21 +3,23 @@
 <br>
 
 <div class="d-flex flex-column align-items-center justify-content-between mt-4" id="main-container">
-    <div class="card" style="width: 40rem;">
+    <div class="card" style="width: 55rem;">
       <% if @castle.photo.attached? %>
-        <%= cl_image_tag @castle.photo.key, height: 300, width: 639, crop: :fill, id: "show-image"  %>
+        <%= cl_image_tag @castle.photo.key, height: 300, width: 878, crop: :fill, id: "show-image"  %>
         <% else %>
         <p>You have no photo</p>
         <% end %>
-      <div class="card-body" style="width: 18rem;">
-        <h2>Welcome to <%= @castle.name %></h2>
+      <div class="card-body" style="width: 55rem;">
+        <h2 id="castle-title"><%= @castle.name %></h2>
         <strong id="red-word"> <%= @castle.address %> </strong>
         <p> Host: <%= @castle.user.email %></p>
 
         <div class="container my-5">
             <div class="row">
               <%= simple_form_for [@castle, @booking] do |f| %>
+              <p id="red-word">CHECK-IN</p>
               <%= f.input :start_date, as: :date, html5: true %>
+              <p id="red-word">CHECKOUT</p>
               <%= f.input :end_date, as: :date, html5: true %>
               <%= f.submit %>
               <% end %>
@@ -26,7 +28,7 @@
             <%= link_to "Back", root_path, class: "btn btn-danger" %>
             <br>
             <br>
-            <div class="cards" style="width: 40rem;">
+            <div class="cards" style="width: 55rem;">
               <div id="map"
               style="width:90%; height: 280px; border-radius: 10px; align-items: center;"
               data-markers="<%= @markers.to_json %>"
