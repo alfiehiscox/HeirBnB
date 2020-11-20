@@ -64,7 +64,7 @@
 .my-booking {
   width: 350px;
   background-color: white;
-  padding: 10px;
+  padding-top: 17px;
   margin: 10px auto;
   border-radius: 10px;
   box-shadow: 3px 5px 5px rgb(224, 224, 224);
@@ -100,6 +100,7 @@
 
   .dates {
     display: flex;
+    padding-top: 20px;
 
     p {
       padding-right: 10px;
@@ -127,7 +128,11 @@
   font-size: 18px;
 }
 
-#brand-color a {
-  text-decoration: none;
+.brand-color {
   color: rgb(254, 75, 74);
+
+  a {
+    color: rgb(254, 75, 74);
+    text-decoration: none;
+  }
 }
